@@ -7,7 +7,11 @@ const contact = () => {
       <h1>contact.</h1>
       <p>
         You can reach me on
-        <a href="https://twitter.com/__dxp" target="_blank">
+        <a
+          href="https://twitter.com/__dxp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Twitter!
         </a>
       </p>
