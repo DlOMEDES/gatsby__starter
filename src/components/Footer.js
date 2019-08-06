@@ -1,10 +1,29 @@
 import React from "react"
+import styled from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
+
+const StyledFooter = styled.footer`
+  background: black;
+  color: white;
+  padding: 2rem;
+`
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `)
+  const { author } = data.site.siteMetadata
+
   return (
-    <footer>
-      <p>Created by Diomedes Lajara © 2019</p>
-    </footer>
+    <StyledFooter>
+      <p>Created by {author} © 2019</p>
+    </StyledFooter>
   )
 }
 
